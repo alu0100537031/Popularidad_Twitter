@@ -9,7 +9,7 @@
 			}
 
   			#cabecera{
-				background-color: black;
+				background-color: grey;
 				background-size:  100%;
 				height: 7em;
 			  	margin: 0;
@@ -49,7 +49,7 @@
 			}
 
 			#warning{
-				background-color: #FFCC66;
+				background-color: #f4b1a9;
 				font-size: 1.5em;
 				color: red;
 				padding-left: 2em;
@@ -60,8 +60,56 @@
 			}
 
 			#col{
-				background-color: #E8E8E8 ;
+				background-color: #E8E8E8;
 				text-align: left;
 				margin-bottom: 1em;
 			}	
 		</style>
+		
+		<title>Rack::Response</title>
+	</head>
+	<body style= "background-color: #96ddec;">
+		<div id="cabecera">
+	 			<p><img src="/bird_icon.png" WIDTH=100 HEIGHT=100 />
+	 			<b>Popularidad de amigos en Twitter</b></p>
+	 	</div>
+	 	
+	 	<div id="re">
+		 	<form action="/" method="post">
+		   		<p><b>Nombre de usuario en Twitter: </b></p><input type="text" name="firstname"  value="" autofocus>
+		   		<p><b>¿Cuántos amigos desea ver? </b></p><input type="text" name="n" value="1">
+		   		<input  type="submit" value="Obtener" >
+		 	</form>
+	 	</div>
+ 		
+ 		<div id="izquierda">
+                       <% if @name == ''%>
+				<p id="warning"> No se ha introducido ningun usuario o es incorrecto </p>
+			<%else%>
+				<p><b> Usuario <i><%= @name %></i></b></p>
+			<%end %>
+
+                       <% if @name != ''%>
+				<%if @number>10%>
+					<p id="warning"> Sólo se puede mostrar hasta 10 amigos </p>
+				<%elsif @amigos_usuario.length <= 0 %>
+					<p id="warning">El usuario no existe o no tiene amigos</p>
+				<%elsif @amigos_usuario.length < @number %>
+					<p id="warning">El usuario tiene menos de <%= @number%> amigos</p>
+					<ol>
+						<% @amigos_usuario.each do |i| %> 
+							<li id="col"><%= i %><br></li>
+						<% end %>
+					</ol>
+				<%else%>
+					<p>Amigos :</p>
+					<ol>
+						<% @amigos_usuario.each do |i| %> 
+							<li id="col"><%= i %><br></li>
+						<% end %>
+					</ol>
+				<%end%>
+			<%end%>
+		</div>	
+	</body>
+</html>
