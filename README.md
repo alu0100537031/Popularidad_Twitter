@@ -12,8 +12,8 @@ cualquiera, siguiendo el criterio del numero de seguidores.
 --------------
 
 1. Instalaremos las gemas necesarias mediante el comando: `bundle install`
-2. Configuraremos el fichero `configure.rb` introduciendo las claves necesarias para solicitar permiso a Twitter
-  siguiendo las directrices del fichero `configure.rb.example `
+2. Configuraremos el fichero `configure.rb` introduciendo las claves necesarias para solicitar permiso a Twitter.
+  
 
 
 ## Ejecución
@@ -22,6 +22,7 @@ cualquiera, siguiendo el criterio del numero de seguidores.
 Podemos ejecutarlo de dos formas:
 
 1. Ejecutando el comando`ruby twitter.rb`
-2. Ir a la dirección [http://localhost:4567/] para poder usar la aplicación
+2. Ir a la dirección [http://localhost:4567/](http://localhost:9393/) para poder usar la aplicación
 
 
+[http://localhost:4567/](http://localhost:9393/)
