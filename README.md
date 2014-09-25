@@ -25,4 +25,3 @@ Podemos ejecutarlo de dos formas:
 2. Ir a la dirección [http://localhost:4567/](http://localhost:9393/) para poder usar la aplicación
 
 
-[http://localhost:4567/](http://localhost:9393/)
