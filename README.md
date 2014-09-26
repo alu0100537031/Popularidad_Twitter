@@ -22,6 +22,6 @@ cualquiera, siguiendo el criterio del numero de seguidores.
 Podemos ejecutarlo de dos formas:
 
 1. Ejecutando el comando`ruby twitter.rb`
-2. Ir a la dirección [http://localhost:4567/](http://localhost:9393/) para poder usar la aplicación
+2. Ir a la dirección http://localhost:4567/ para poder usar la aplicación
 
 
